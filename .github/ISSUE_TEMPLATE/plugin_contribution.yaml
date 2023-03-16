@@ -1,0 +1,67 @@
+name: Plugin Contribution
+description: 'Submit a proposal for a new Plugin'
+title: 'Plugin: <title>'
+labels: [plugin]
+body:
+  - type: textarea
+    id: plugin-summary
+    validations:
+      required: true
+    attributes:
+      label: 'Summary'
+      description: 'A 1-2 paragraph description that describes: intent, problem being solved, and overall objective'
+  - type: textarea
+    id: plugin-personas
+    validations:
+      required: true
+    attributes:
+      label: 'Persona(s)'
+      description: 'Overview of persona(s) that the contribution is intending to support. Required elements include: name, description, motivation, goal, example pain points, additional context'
+      placeholder:
+        "Name: '...'\n
+        Description: '...'\n
+        Motivation: '...'\n
+        Goal: '...'\n
+        Pain points: '...'\n
+        Additional context: '...'"
+  - type: textarea
+    id: plugin-user-stories
+    validations:
+      required: true
+    attributes:
+      label: 'User stories'
+      description: 'The features that would be implemented by the contributing team. Include one or more user stories'
+      placeholder:
+        "As a '...'\n
+        I want to '...'\n
+        so that '...'"
+  - type: textarea
+    id: plugin-experience-walkthrough
+    validations:
+      required: true
+    attributes:
+      label: 'Experience walkthrough'
+      description: 'A step by step guide for how a user would take advantage of the features being implemented'
+      placeholder:
+        "Diagnostics \n
+        1) Navigate to service through the catalog...\n
+        2) ..."
+  - type: textarea
+    id: plugin-designs
+    attributes:
+      label: 'Mockups, architecture, data model'
+      description: 'Attach any images that are visual representations of the design, architectural components and data model of the plguins relationship with entities.'
+  - type: checkboxes
+    id: no-duplicate-issues
+    attributes:
+      label: '👀 Have you spent some time to check if this plugin has been or is being contributed before?'
+      options:
+        - label: "I checked and didn't find similar plugins"
+          required: true
+  - type: checkboxes
+    id: read-contribution-guide
+    attributes:
+      label: '🏢 Have you read the Contribution guide'
+      options:
+        - label: 'I have read the [Contribution guide](https://git.corp.adobe.com/adobe-platform/developer-home/blob/main/CONTRIBUTING.md)'
+          required: true
